@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE package SYSTEM "../package.dtd">
 <!-- do not use the "Type" attribute here, that one is only for
      generated package.xml files -->
-<package>
+<package version="1.0">
   <name>DB_Pager</name>
   <summary>Retrieve and return information of database result sets</summary>
   <description>This class handles all the stuff needed for displaying
@@ -9,12 +10,14 @@ paginated results from a database query of Pear DB.
 including fetching only the needed rows and giving extensive information
 for helping build an HTML or GTK query result display.
   </description>
-  <maintainer>
-    <user>cox</user>
-    <name>Tomas V.V.Cox</name>
-    <email>cox@php.net</email>
-    <role>lead</role>
-  </maintainer>
+  <maintainers>
+    <maintainer>
+      <user>cox</user>
+      <name>Tomas V.V.Cox</name>
+      <email>cox@php.net</email>
+      <role>lead</role>
+    </maintainer>
+  </maintainers>
 
   <release>
     <version>0.6</version>
