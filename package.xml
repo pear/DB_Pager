@@ -3,25 +3,29 @@
      generated package.xml files -->
 <package>
   <name>DB_Pager</name>
-  <summary>Retrieve and return information of database
-  result sets</summary>
+  <summary>Retrieve and return information of database result sets</summary>
+  <description>This class handles all the stuff needed for displaying
+paginated results from a database query of Pear DB.
+including fetching only the needed rows and giving extensive information
+for helping build an HTML or GTK query result display.
+  </description>
   <maintainer>
     <user>cox</user>
     <name>Tomas V.V.Cox</name>
     <email>cox@php.net</email>
-	<role>lead</role>
+    <role>lead</role>
   </maintainer>
 
   <release>
     <version>0.6</version>
     <date>2001-10-31</date>
-    <notes>Initial commit</notes>
-	<state>beta</state>
-  </release>
-
+    <notes>First release as a PEAR Package (only the class name has changed)</notes>
+    <state>beta</state>
+  
   <filelist>
     <dir name="/" baseinstalldir="DB">
         <file role="php">Pager.php</file>
     </dir>
   </filelist>
+ </release>
 </package>
