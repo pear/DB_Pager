@@ -148,7 +148,7 @@ class DB_Pager extends PEAR
     *    'from'    => X,    // the row to start fetching
     *    'to'      => X,    // the row to stop fetching
     *    'limit'   => X,    // how many results per page
-    *    'maxpages'   => X, // how many pages to show (google style)
+    *    'maxpages'   => X, // how many pages to show (Google style)
     *    'firstpage'  => X, // the row number of the first page
     *    'lastpage'   => X, // the row number where the last page starts
     *    'pages'   => array(    // assoc with page "number => start row"
@@ -200,7 +200,7 @@ class DB_Pager extends PEAR
                                      null, null, 'DB_Error', true);
         }
 
-        // Limit number of pages (goole algoritm)
+        // Limit number of pages (Goole algorithm)
         if ($maxpages) {
             $radio = floor($maxpages/2);
             $minpage = $data['current'] - $radio;
