@@ -9,6 +9,7 @@ paginated results from a database query of Pear DB.
 including fetching only the needed rows and giving extensive information
 for helping build an HTML or GTK query result display.
   </description>
+  <license>LGPL</license>
   <maintainers>
     <maintainer>
       <user>cox</user>
@@ -41,5 +42,6 @@ for helping build an HTML or GTK query result display.
         <date>2001-10-31</date>
         <notes>First release as a PEAR Package (only the class name has changed)</notes>
         <state>stable</state>
+        </release>
     </changelog>
 </package>
