@@ -1,7 +1,7 @@
 <?php
 //
 //	Pear DB Pager - Retrieve and return information of database
-//  result sets
+//                  result sets
 //
 //	Copyright (C) 2001  Tomas Von Veschler Cox <cox@idecnet.com>
 //
@@ -31,7 +31,7 @@ require_once 'DB.php';
 * Documentation and examples of use, can be found in:
 * http://vulcanonet.com/soft/pager/
 *
-* @version 0.5.2
+* @version 0.6 (beta 1)
 * @author Tomas V.V.Cox <cox@idecnet.com>
 * @see http://vulcanonet.com/soft/pager/
 */
@@ -50,7 +50,7 @@ class DB_Pager extends PEAR
     *    doesn't support numrows(), you can manually calculate it
     *    and supply later to the constructor
     */
-    function Pager (&$res, $from, $limit, $numrows = null)
+    function DB_Pager (&$res, $from, $limit, $numrows = null)
     {
         $this->res = $res;
         $this->from = $from;
@@ -63,7 +63,7 @@ class DB_Pager extends PEAR
     *
     * @return mixed An assoc array with all the data (see getData)
     *    or DB_Error on error
-    * @see Pager::getData
+    * @see DB_Pager::getData
     */
     function build ()
     {
@@ -182,8 +182,8 @@ class DB_Pager extends PEAR
             $data['to'] = $data['current'] * $limit;
         }
         $data['numrows'] = $numrows;
-        $data['from'] = $from + 1;
-        $data['limit'] = $limit;
+        $data['from']    = $from + 1;
+        $data['limit']   = $limit;
 
         return $data;
     }
