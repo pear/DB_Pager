@@ -20,7 +20,7 @@ for helping build an HTML or GTK query result display.
     <version>0.6</version>
     <date>2001-10-31</date>
     <notes>First release as a PEAR Package (only the class name has changed)</notes>
-    <state>beta</state>
+    <state>stable</state>
   
   <filelist>
     <dir name="/" baseinstalldir="DB">
