@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE package SYSTEM "../package.dtd">
 <!-- do not use the "Type" attribute here, that one is only for
      generated package.xml files -->
 <package version="1.0">
@@ -20,15 +19,27 @@ for helping build an HTML or GTK query result display.
   </maintainers>
 
   <release>
-    <version>0.6</version>
-    <date>2001-10-31</date>
-    <notes>First release as a PEAR Package (only the class name has changed)</notes>
+    <version>0.7</version>
+    <date>2002-05-12</date>
+    <notes>
+- Marked as deprecated constructor, build(), fetchInto() and fetchRow(). Use the native PEAR DB row limit support instead (the limitQuery() method)
+- Implemented the Google algorithm for restricting the number of pages to show (the new fourth param of DB_Pager::getData())
+- Added more info in the data array: maxpages, firstpage, lastpage
+- Updated in-line doc with usage example
+    </notes>
     <state>stable</state>
-  
   <filelist>
     <dir name="/" baseinstalldir="DB">
         <file role="php">Pager.php</file>
     </dir>
   </filelist>
  </release>
+
+    <changelog>
+      <release>
+        <version>0.6</version>
+        <date>2001-10-31</date>
+        <notes>First release as a PEAR Package (only the class name has changed)</notes>
+        <state>stable</state>
+    </changelog>
 </package>
