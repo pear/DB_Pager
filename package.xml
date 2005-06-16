@@ -17,16 +17,21 @@ for helping build an HTML or GTK query result display.
       <email>cox@php.net</email>
       <role>lead</role>
     </maintainer>
+    <maintainer>
+      <user>quipo</user>
+      <name>Lorenzo Alberton</name>
+      <email>l.alberton@quipo.it</email>
+      <role>lead</role>
+    </maintainer>
   </maintainers>
 
   <release>
-    <version>0.7</version>
-    <date>2002-05-12</date>
+    <version>0.7.1</version>
+    <date>2005-06-16</date>
     <notes>
-- Marked as deprecated constructor, build(), fetchInto() and fetchRow(). Use the native PEAR DB row limit support instead (the limitQuery() method)
-- Implemented the Google algorithm for restricting the number of pages to show (the new fourth param of DB_Pager::getData())
-- Added more info in the data array: maxpages, firstpage, lastpage
-- Updated in-line doc with usage example
+- fixed bug #4602: wrong google algorithm if $maxpages is set and
+  if the current page is less than $maxpages from either the top
+  or bottom of the range (patch by ssharkey at linuxunlimited dot com).
     </notes>
     <state>stable</state>
   <filelist>
@@ -38,10 +43,21 @@ for helping build an HTML or GTK query result display.
 
     <changelog>
       <release>
+        <version>0.7</version>
+        <date>2002-05-12</date>
+        <notes>
+- Marked as deprecated constructor, build(), fetchInto() and fetchRow(). Use the native PEAR DB row limit support instead (the limitQuery() method)
+- Implemented the Google algorithm for restricting the number of pages to show (the new fourth param of DB_Pager::getData())
+- Added more info in the data array: maxpages, firstpage, lastpage
+- Updated in-line doc with usage example
+        </notes>
+        <state>stable</state>
+      </release>
+      <release>
         <version>0.6</version>
         <date>2001-10-31</date>
         <notes>First release as a PEAR Package (only the class name has changed)</notes>
         <state>stable</state>
-        </release>
+      </release>
     </changelog>
 </package>
