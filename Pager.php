@@ -200,7 +200,7 @@ class DB_Pager extends PEAR
                                      null, null, 'DB_Error', true);
         }
 
-        // Limit number of pages (Goole algorithm)
+        // Limit number of pages (Google algorithm)
         if ($maxpages) {
             $radio = floor($maxpages/2);
             $minpage = $data['current'] - $radio;
@@ -210,6 +210,19 @@ class DB_Pager extends PEAR
             $maxpage = $data['current'] + $radio - 1;
             if ($maxpage > $data['numpages']) {
                 $maxpage = $data['numpages'];
+            }
+            if ($data['numpages'] < $maxpages) {
+                $minpage = 1;
+                $maxpage = $data['numpages'];
+            } else {
+                // if we're at the top of the range, move minpage down...
+                if ($data['lastpage'] - $minpage < $maxpages) {
+                    $minpage = $data['lastpage'] - $maxpages + 1;
+                }
+                // if we're at the bottom of the range, move maxpage up...
+                if ($maxpage < $maxpages) {
+                    $maxpage = $maxpages;
+                }
             }
             foreach (range($minpage, $maxpage) as $page) {
                 $tmp[$page] = $data['pages'][$page];
