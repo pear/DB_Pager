@@ -167,13 +167,15 @@ class DB_Pager extends PEAR
     function &getData($from, $limit, $numrows, $maxpages = false)
     {
         if (empty($numrows) || ($numrows < 0)) {
-            return null;
+            $null = null;
+            return $null;
         }
         $from = (empty($from)) ? 0 : $from;
 
         if ($limit <= 0) {
-            return PEAR::raiseError (null, 'wrong "limit" param', null,
+            $err = PEAR::raiseError (null, 'wrong "limit" param', null,
                                      null, null, 'DB_Error', true);
+            return $err;
         }
 
         // Total number of pages
@@ -196,8 +198,9 @@ class DB_Pager extends PEAR
             }
         }
         if (!isset($data['current'])) {
-            return PEAR::raiseError (null, 'wrong "from" param', null,
+            $err = PEAR::raiseError (null, 'wrong "from" param', null,
                                      null, null, 'DB_Error', true);
+            return $err;
         }
 
         // Limit number of pages (Google algorithm)
