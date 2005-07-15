@@ -27,11 +27,12 @@ for helping build an HTML or GTK query result display.
 
   <release>
     <version>0.7.1</version>
-    <date>2005-06-16</date>
+    <date>2005-07-15</date>
     <notes>
 - fixed bug #4602: wrong google algorithm if $maxpages is set and
   if the current page is less than $maxpages from either the top
   or bottom of the range (patch by ssharkey at linuxunlimited dot com).
+- fixed bug #4842 (return by reference)
     </notes>
     <state>stable</state>
   <filelist>
