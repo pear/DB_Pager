@@ -20,14 +20,14 @@ for helping build an HTML or GTK query result display.</description>
   <active>yes</active>
  </lead>
  <date>2009-01-05</date>
- <time>04:37:02</time>
+ <time>04:51:31</time>
  <version>
   <release>0.7.2</release>
   <api>0.7.1</api>
  </version>
  <stability>
-  <release>stable</release>
-  <api>stable</api>
+  <release>beta</release>
+  <api>beta</api>
  </stability>
  <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
  <notes>Package 2.0</notes>
@@ -83,8 +83,8 @@ for helping build an HTML or GTK query result display.</description>
     <api>0.7.1</api>
    </version>
    <stability>
-    <release>stable</release>
-    <api>stable</api>
+    <release>beta</release>
+    <api>beta</api>
    </stability>
    <date>2009-01-05</date>
    <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
